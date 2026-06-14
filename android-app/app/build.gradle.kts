@@ -4,10 +4,10 @@ import java.util.Properties
 // app.properties   → WEB_URL, APP_NAME, PACKAGE_ID   (the one file to edit)
 // version.properties → VERSION_CODE, VERSION_NAME     (auto-managed by CI)
 val appProps = Properties().apply {
-    file("../app.properties").inputReader().use { load(it) }
+    file("../app.properties").reader().use { load(it) }
 }
 val versionProps = Properties().apply {
-    file("../version.properties").inputReader().use { load(it) }
+    file("../version.properties").reader().use { load(it) }
 }
 
 val webUrl: String = appProps.getProperty("WEB_URL", "https://apkhub.example.com").trim()
@@ -22,7 +22,7 @@ val versionName: String = versionProps.getProperty("VERSION_NAME", "1.0.0").trim
 val keystorePropsFile = rootProject.file("keystore.properties")
 val keystoreProps = Properties()
 if (keystorePropsFile.exists()) {
-    keystoreProps.load(keystorePropsFile.inputReader())
+    keystoreProps.load(keystorePropsFile.reader())
 }
 
 plugins {

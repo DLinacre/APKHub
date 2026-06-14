@@ -1,78 +1,61 @@
-# APKHub — An Open-Source Play Store Powered by GitHub Releases
+# 📱 AppHub
 
-APKHub is a discovery engine that automatically scans **public** GitHub repositories and their release assets, indexes every `.apk` it finds, and presents them through a fast, modern, installable Progressive Web App hosted on GitHub Pages.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Android Build](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/LIN4CRE/AppHub/releases)
+[![Version](https://img.shields.io/badge/Version-1.0.1-orange.svg)](https://github.com/LIN4CRE/AppHub/releases)
 
-> **Philosophy:** Never redistribute binaries. Always link to the original, official GitHub release asset and attribute the upstream owner. APKHub is a *catalogue*, not a mirror.
-
----
-
-## How it works (the 30-second version)
-
-```
-        ┌─────────────────────────┐      ┌──────────────────────────┐
-        │   GitHub Actions cron    │      │   GitHub Pages (static)   │
-        │   runs indexer/index.py  │      │   serves app/ (PWA)       │
-        │   → respects rate limits │      │   → reads data/*.json     │
-        │   → incremental ETag sync│      │   → client-side search    │
-        └───────────┬─────────────┘      └────────────▲─────────────┘
-                    │  commits data/*.json             │
-                    └──────────────────────────────────┘
-```
-
-1. A **scheduled GitHub Action** runs a Python indexer.
-2. The indexer queries the GitHub **Search API** + **GraphQL** to discover Android projects, fetches their releases/assets, filters for `.apk` files, normalises metadata, and writes JSON.
-3. The committed JSON is served by **GitHub Pages**.
-4. A static **PWA** renders the catalogue with instant client-side search, filters, dark/light mode, favourites, and offline caching.
-5. Every "Download" button links to the **official** `github.com/.../releases/download/...` asset.
+**AppHub** is your personal, open-source gateway to the best Android apps on GitHub. It's a fast, modern "App Store" that finds, indexes, and helps you install apps directly from their official sources.
 
 ---
 
-## Repository layout
+## ✨ Why AppHub?
 
-```
-.
-├── README.md                  # You are here
-├── DESIGN.md                  # Full architecture & design doc
-├── LICENSE                    # MIT (the catalogue code); data respects upstream licenses
-├── .github/workflows/
-│   └── index.yml              # Scheduled + manual indexing job
-├── indexer/
-│   ├── index.py               # Discovery + indexing engine
-│   ├── requirements.txt
-│   └── config.toml            # Seed repos, topics, rate-limit policy
-└── app/                       # The static PWA (deployed to Pages)
-    ├── index.html
-    ├── styles.css
-    ├── app.js
-    ├── manifest.webmanifest
-    ├── sw.js                  # Service worker (offline cache)
-    └── data/
-        ├── apps.json          # Generated catalogue (committed by the Action)
-        └── detail/*.json      # Per-app deep pages / structured metadata
-```
+*   **🛡️ Pure & Official:** We never host or re-distribute files. You always download the official APK directly from the developer's GitHub release.
+*   **🚀 Lightning Fast:** Instant search and a smooth interface make finding apps a breeze.
+*   **🌗 Eye-Friendly:** Full support for Dark and Light modes.
+*   **📱 Native Feel:** Use the web version or install our lightweight Android app for an integrated experience.
+*   **📦 Open Source:** Built by the community, for the community. Completely transparent and free.
 
 ---
 
-## Quick start
+## 📥 Get Started
 
-### Preview the app locally
-```bash
-cd app
-python3 -m http.server 8080
-# open http://localhost:8080
-```
-The repository ships with a **seed dataset** (`app/data/apps.json`) so the UI is fully explorable with zero configuration.
+### For Everyone (Users)
+The easiest way to use AppHub is to install the Android app. It handles downloads and installations automatically.
 
-### Run the indexer manually
-```bash
-pip install -r indexer/requirements.txt
-export GITHUB_TOKEN=ghp_xxx        # optional but strongly recommended (5000 req/h vs 60)
-python3 indexer/index.py --config indexer/config.toml --out app/data
-```
+1.  **Download the latest APK** from our [Releases Page](https://github.com/LIN4CRE/AppHub/releases).
+2.  Open the file on your Android device and follow the prompts to install.
+3.  Launch **AppHub** and start discovering!
 
-### Deploy
-1. Push to `main`.
-2. Enable **Settings → Pages → GitHub Actions**.
-3. The `index.yml` workflow both builds the data and deploys `app/` to Pages on a schedule.
+*Note: You may need to enable "Install from Unknown Sources" in your device settings.*
 
-See [`DESIGN.md`](DESIGN.md) for the full architecture, scalability model, security posture, and maintenance plan.
+### For Developers & Tinkerers
+Want to host your own version or contribute?
+
+1.  **Clone the Repo:** `git clone https://github.com/LIN4CRE/AppHub.git`
+2.  **Run Locally:**
+    ```bash
+    cd app
+    python3 -m http.server 8080
+    ```
+3.  **Indexing:** The project includes a Python-based discovery engine in `/indexer`.
+
+---
+
+## 🛠️ How it Works
+
+AppHub isn't a mirror—it's a **catalog**.
+
+1.  **Discovery:** Our automated indexer scans GitHub for high-quality Android projects.
+2.  **Metadata:** It extracts version numbers, descriptions, and release assets.
+3.  **Presentation:** The web interface (PWA) displays this data in a clean, searchable format.
+4.  **Delivery:** When you tap "Download", your device talks directly to GitHub's servers to fetch the app.
+
+---
+
+## 📜 License & Philosophy
+
+AppHub is released under the **MIT License**. We believe in the power of the open-source ecosystem and aim to make it easier for users to find and support developers directly.
+
+---
+*Built with ❤️ for the Android Community.*
