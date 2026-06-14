@@ -1,0 +1,40 @@
+{
+  "slug": "termux-termux-app",
+  "name": "Termux",
+  "owner": "termux",
+  "ownerType": "Organization",
+  "repo": "termux-app",
+  "repoUrl": "https://github.com/termux/termux-app",
+  "description": "Android terminal and Linux environment - apps can be installed with apt. No root required.",
+  "icon": "https://github.com/termux.png",
+  "color": "#2d2d2d",
+  "category": "Tools",
+  "topics": [
+    "android",
+    "terminal",
+    "linux",
+    "bash"
+  ],
+  "language": "C++",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "0.118.1",
+  "versionCode": 1181,
+  "minSdk": 24,
+  "publishedAt": "2025-11-02T00:00:00Z",
+  "size": 63180590,
+  "downloadUrl": "https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+apt-android-7-github-debug_arm64-v8a.apk",
+  "releasePage": "https://github.com/termux/termux-app/releases/tag/v0.118.1",
+  "stars": 38200,
+  "forks": 4100,
+  "downloadCount": null,
+  "score": 62.4,
+  "recommendedAsset": {
+    "arch": "arm64-v8a",
+    "abi": "arm64-v8a"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

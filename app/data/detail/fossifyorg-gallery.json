@@ -1,0 +1,40 @@
+{
+  "slug": "fossifyorg-gallery",
+  "name": "Fossify Gallery",
+  "owner": "FossifyOrg",
+  "ownerType": "Organization",
+  "repo": "Gallery",
+  "repoUrl": "https://github.com/FossifyOrg/Gallery",
+  "description": "Ad-free, privacy-friendly gallery app. Browse, edit and manage your photos offline.",
+  "icon": "https://github.com/FossifyOrg.png",
+  "color": "#00897b",
+  "category": "Media",
+  "topics": [
+    "android",
+    "gallery",
+    "photos",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "1.2.0",
+  "versionCode": 24,
+  "minSdk": 23,
+  "publishedAt": "2026-03-10T00:00:00Z",
+  "size": 8400000,
+  "downloadUrl": "https://github.com/FossifyOrg/Gallery/releases/download/1.2.0/Gallery-1.2.0-foss.apk",
+  "releasePage": "https://github.com/FossifyOrg/Gallery/releases/tag/1.2.0",
+  "stars": 2100,
+  "forks": 180,
+  "downloadCount": null,
+  "score": 33.1,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

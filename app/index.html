@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1117" />
+  <meta name="description" content="APKHub — discover, browse and download open-source Android apps distributed via GitHub releases. The open-source Play Store." />
+  <title>APKHub — Open-Source Android Apps from GitHub</title>
+
+  <!-- SEO: canonical + Open Graph -->
+  <link rel="canonical" href="https://apkhub.example.com/" />
+  <meta property="og:title" content="APKHub — Open-Source Android Apps from GitHub" />
+  <meta property="og:description" content="Discover, browse and download open-source Android apps distributed via GitHub releases." />
+  <meta property="og:type" content="website" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="APKHub home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M7 2a1 1 0 0 0-1 1v3h2V4h8v16H8v-2H6v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H7Z"/>
+          <path fill="currentColor" d="M10.5 16.5 6 12l1.4-1.4 3.1 3.1 5.1-5.1L17 10l-6.5 6.5Z"/>
+        </svg>
+        <span class="brand-name">APK<span class="brand-accent">Hub</span></span>
+      </a>
+
+      <div class="search-wrap" role="search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="m15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5 1.49-1.5-5-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/>
+        </svg>
+        <input id="search" type="search" placeholder="Search apps, developers, topics…"
+               autocomplete="off" spellcheck="false" aria-label="Search apps" />
+        <kbd class="search-kbd" id="searchKbd">/</kbd>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" id="favBtn" title="Your favourites" aria-label="Favourites">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35Z"/></svg>
+          <span class="badge" id="favCount" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark/light mode">
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-6.54-6.54A9.2 9.2 0 0 0 12 3Z"/></svg>
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5 1.5 3h-3L12 2Zm0 20-1.5-3h3L12 22ZM2 12l3 1.5v-3L2 12Zm20 0-3-1.5v3L22 12ZM5.6 5.6l2.1 2.1-2.1.6-.0 0 .0-2.7Zm12.8 0v2.7l-2.1-.6 2.1-2.1ZM5.6 18.4l2.1-2.1.0 0-.0 2.1-2.1 0Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="filters" id="filters" aria-label="Filters">
+      <div class="chips" id="categoryChips" role="group" aria-label="Category"></div>
+      <div class="filter-selects">
+        <label class="select">
+          <span>Sort</span>
+          <select id="sort">
+            <option value="trending">Trending</option>
+            <option value="stars">Most starred</option>
+            <option value="newest">Recently updated</option>
+            <option value="name">Name (A–Z)</option>
+            <option value="size">Smallest first</option>
+          </select>
+        </label>
+        <label class="select">
+          <span>License</span>
+          <select id="licenseFilter"><option value="">Any</option></select>
+        </label>
+        <label class="select">
+          <span>Language</span>
+          <select id="langFilter"><option value="">Any</option></select>
+        </label>
+        <label class="select">
+          <span>Android</span>
+          <select id="minSdkFilter">
+            <option value="">Any</option>
+            <option value="8">8+</option><option value="10">10+</option>
+            <option value="12">12+</option><option value="14">14+</option>
+          </select>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Views are rendered into this container by app.js -->
+    <section id="view"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>APKHub</strong> — an open catalogue of Android apps on GitHub.
+        Metadata only; downloads link to official release assets.
+      </div>
+      <div class="footer-meta" id="indexHealth" hidden>
+        <span id="healthApps"></span> · indexed <span id="healthDate"></span>
+      </div>
+      <div class="footer-links">
+        <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener">GitHub API</a>
+        <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Detail modal (deep-linked via hash for shareability + SEO) -->
+  <div class="modal" id="modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-panel" id="modalPanel"></article>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

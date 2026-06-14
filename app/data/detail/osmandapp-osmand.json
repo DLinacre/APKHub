@@ -1,0 +1,41 @@
+{
+  "slug": "osmandapp-osmand",
+  "name": "OsmAnd",
+  "owner": "osmandapp",
+  "ownerType": "Organization",
+  "repo": "OsmAnd",
+  "repoUrl": "https://github.com/osmandapp/OsmAnd",
+  "description": "Offline/online maps and navigation for Android, built on OpenStreetMap data.",
+  "icon": "https://github.com/osmandapp.png",
+  "color": "#388e3c",
+  "category": "Tools",
+  "topics": [
+    "android",
+    "maps",
+    "navigation",
+    "openstreetmap",
+    "java"
+  ],
+  "language": "Java",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "4.8.4",
+  "versionCode": 484,
+  "minSdk": 23,
+  "publishedAt": "2026-02-09T00:00:00Z",
+  "size": 145000000,
+  "downloadUrl": "https://github.com/osmandapp/OsmAnd/releases/download/4.8.4/OsmAnd-default.apk",
+  "releasePage": "https://github.com/osmandapp/OsmAnd/releases/tag/4.8.4",
+  "stars": 4900,
+  "forks": 1200,
+  "downloadCount": null,
+  "score": 45.9,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

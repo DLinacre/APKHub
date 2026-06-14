@@ -1,0 +1,52 @@
+# APKHub indexer configuration.
+# This file is the single source of truth for *what* gets indexed and *how
+# politely* we hit the GitHub API. Edit freely; the indexer re-reads it on
+# every run.
+
+[indexing]
+# GraphQL/REST requests are throttled so we never consume more than this
+# fraction of the current rate-limit window. 0.8 == leave 20% headroom.
+rate_limit_fraction = 0.8
+# Hard ceiling on parallel GraphQL batches (future: matrix sharding).
+max_graphql_batch = 50
+# How many of each repo's most recent releases to inspect for APK assets.
+releases_per_repo = 5
+# Assets per release to inspect.
+assets_per_release = 20
+# Parse the APK ZIP header (~4 KB Range request) for real package/version/minSdk.
+# Off by default to keep bandwidth conservative. Enable in Phase 2.
+parse_apk_header = false
+
+[discovery]
+# Curated allowlist of well-known FOSS Android projects. Always indexed.
+# Format: "owner/repo".
+seeds = [
+  "termux/termux-app",
+  "AntennaPod/AntennaPod",
+  "teamnewpipe/NewPipe",
+  "mihonapp/mihon",
+  "FossifyOrg/Gallery",
+  "SimpleMobileTools/Simple-Calendar",
+]
+
+# GitHub repository topics used to widen discovery via /search/repositories.
+# Higher precision than full-text search for Android projects.
+topics = [
+  "android-app",
+  "fdroid",
+  "android",
+  "kotlin-android",
+  "flutter-app",
+]
+
+# Results per topic page to fetch (max 100 for Search API).
+search_per_page = 100
+# Max pages per topic to crawl (caps the candidate pool per run).
+search_max_pages = 3
+
+[output]
+# Relative to the indexer working dir. The Action runs from repo root, so
+# this points at the served PWA data directory.
+out_dir = "app/data"
+# Emit per-app detail JSON files (for deep-linkable detail pages + JSON-LD).
+write_detail = true

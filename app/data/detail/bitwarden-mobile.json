@@ -1,0 +1,40 @@
+{
+  "slug": "bitwarden-mobile",
+  "name": "Bitwarden",
+  "owner": "bitwarden",
+  "ownerType": "Organization",
+  "repo": "mobile",
+  "repoUrl": "https://github.com/bitwarden/mobile",
+  "description": "Open source password manager. Store and autofill logins securely across all your devices.",
+  "icon": "https://github.com/bitwarden.png",
+  "color": "#175ddc",
+  "category": "Security",
+  "topics": [
+    "android",
+    "password-manager",
+    "security",
+    "csharp"
+  ],
+  "language": "C#",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "2026.4.0",
+  "versionCode": 50400,
+  "minSdk": 25,
+  "publishedAt": "2026-04-22T00:00:00Z",
+  "size": 78000000,
+  "downloadUrl": "https://github.com/bitwarden/mobile/releases/download/v2026.4.0/com.x8bit.bitwarden.apk",
+  "releasePage": "https://github.com/bitwarden/mobile/releases/tag/v2026.4.0",
+  "stars": 2300,
+  "forks": 1100,
+  "downloadCount": null,
+  "score": 31.0,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "newpipe-newpipe",
+  "name": "NewPipe",
+  "owner": "TeamNewPipe",
+  "ownerType": "Organization",
+  "repo": "NewPipe",
+  "repoUrl": "https://github.com/TeamNewPipe/NewPipe",
+  "description": "A lightweight YouTube frontend with background play and downloads. No Google services required.",
+  "icon": "https://github.com/TeamNewPipe.png",
+  "color": "#cd201f",
+  "category": "Media",
+  "topics": [
+    "android",
+    "youtube",
+    "media",
+    "java"
+  ],
+  "language": "Java",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "0.27.7",
+  "versionCode": 997,
+  "minSdk": 21,
+  "publishedAt": "2026-01-15T00:00:00Z",
+  "size": 9200000,
+  "downloadUrl": "https://github.com/TeamNewPipe/NewPipe/releases/download/v0.27.7/NewPipe_v0.27.7.apk",
+  "releasePage": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.27.7",
+  "stars": 32000,
+  "forks": 3100,
+  "downloadCount": null,
+  "score": 58.9,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#0d1117"/>
+  <rect x="146" y="88" width="220" height="336" rx="30" fill="none" stroke="#3b82f6" stroke-width="20"/>
+  <circle cx="256" cy="128" r="6" fill="#3b82f6"/>
+  <path d="M170 376 L256 296 L342 376" fill="none" stroke="#3b82f6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+  <path d="M196 300 L256 360 L356 250" fill="none" stroke="#2ea043" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="256" y="468" font-family="sans-serif" font-size="64" font-weight="700" fill="#e6edf3" text-anchor="middle">APKHub</text>
+</svg>

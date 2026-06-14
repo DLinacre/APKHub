@@ -1,0 +1,10 @@
+# Indexer dependencies.
+# The reference implementation uses only the standard library for the core
+# pipeline plus these two well-audited packages for config + schema validation.
+# `requests` can be swapped for stdlib urllib; pydantic is optional (used for
+# schema validation of the emitted catalogue).
+
+requests>=2.31,<3
+tomli>=2.0,<3 ; python_version < "3.11"
+# pydantic is imported lazily; the indexer degrades gracefully if absent.
+pydantic>=2.5,<3

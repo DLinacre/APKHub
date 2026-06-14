@@ -1,0 +1,41 @@
+{
+  "slug": "keepassdexandroid-keepassdx",
+  "name": "KeePassDX",
+  "owner": "Kunzisoft",
+  "ownerType": "Organization",
+  "repo": "KeePassDX",
+  "repoUrl": "https://github.com/Kunzisoft/KeePassDX",
+  "description": "Lightweight password manager for Android, compatible with KeePass databases.",
+  "icon": "https://github.com/Kunzisoft.png",
+  "color": "#1565c0",
+  "category": "Security",
+  "topics": [
+    "android",
+    "password",
+    "keepass",
+    "security",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "4.0.3",
+  "versionCode": 76,
+  "minSdk": 21,
+  "publishedAt": "2026-03-25T00:00:00Z",
+  "size": 12000000,
+  "downloadUrl": "https://github.com/Kunzisoft/KeePassDX/releases/download/4.0.3/KeePassDX-4.0.3-universal.apk",
+  "releasePage": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.0.3",
+  "stars": 4500,
+  "forks": 300,
+  "downloadCount": null,
+  "score": 44.1,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paths the FileProvider is allowed to share (downloaded APK files). -->
+<paths>
+    <external-files-path name="downloads" path="." />
+    <cache-path name="cache" path="." />
+</paths>

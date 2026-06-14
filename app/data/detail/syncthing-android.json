@@ -1,0 +1,40 @@
+{
+  "slug": "syncthing-android",
+  "name": "Syncthing",
+  "owner": "syncthing",
+  "ownerType": "Organization",
+  "repo": "syncthing-android",
+  "repoUrl": "https://github.com/syncthing/syncthing-android",
+  "description": "Continuous file synchronization between devices. Decentralised, peer-to-peer, no cloud.",
+  "icon": "https://github.com/syncthing.png",
+  "color": "#0891b2",
+  "category": "Tools",
+  "topics": [
+    "android",
+    "sync",
+    "file-sharing",
+    "go"
+  ],
+  "language": "Go",
+  "license": "MPL-2.0",
+  "licenseDeclared": true,
+  "version": "1.27.12",
+  "versionCode": 4483,
+  "minSdk": 21,
+  "publishedAt": "2025-10-30T00:00:00Z",
+  "size": 28000000,
+  "downloadUrl": "https://github.com/syncthing/syncthing-android/releases/download/1.27.12/syncthing-android-1.27.12-Universal.apk",
+  "releasePage": "https://github.com/syncthing/syncthing-android/releases/tag/1.27.12",
+  "stars": 6400,
+  "forks": 1500,
+  "downloadCount": null,
+  "score": 42.6,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

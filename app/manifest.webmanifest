@@ -1,0 +1,24 @@
+{
+  "name": "APKHub — Open-Source Android Apps from GitHub",
+  "short_name": "APKHub",
+  "description": "Discover, browse and download open-source Android apps distributed via GitHub releases.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Search", "url": "./?focus=search" },
+    { "name": "Favourites", "url": "./?view=favourites" }
+  ]
+}

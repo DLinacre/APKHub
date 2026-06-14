@@ -1,0 +1,40 @@
+{
+  "slug": "mihonapp-mihon",
+  "name": "Mihon",
+  "owner": "mihonapp",
+  "ownerType": "Organization",
+  "repo": "mihon",
+  "repoUrl": "https://github.com/mihonapp/mihon",
+  "description": "Free and open source manga reader for Android. The successor to Tachiyomi.",
+  "icon": "https://github.com/mihonapp.png",
+  "color": "#7b1fa2",
+  "category": "Reading",
+  "topics": [
+    "android",
+    "manga",
+    "reader",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "Apache-2.0",
+  "licenseDeclared": true,
+  "version": "1.11.0",
+  "versionCode": 11100,
+  "minSdk": 21,
+  "publishedAt": "2026-01-30T00:00:00Z",
+  "size": 22500000,
+  "downloadUrl": "https://github.com/mihonapp/mihon/releases/download/v1.11.0/mihon-1.11.0-universal.apk",
+  "releasePage": "https://github.com/mihonapp/mihon/releases/tag/v1.11.0",
+  "stars": 12500,
+  "forks": 900,
+  "downloadCount": null,
+  "score": 55.2,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

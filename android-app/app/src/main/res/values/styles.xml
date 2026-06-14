@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme — dark splash that matches the app's dark mode -->
+    <style name="Theme.APKHub" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+
+    <!-- Splash theme (shown until the WebView paints) -->
+    <style name="Theme.APKHub.Splash" parent="Theme.APKHub">
+        <item name="android:windowBackground">@color/bg_dark</item>
+    </style>
+</resources>

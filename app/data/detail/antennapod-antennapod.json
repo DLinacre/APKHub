@@ -1,0 +1,40 @@
+{
+  "slug": "antennapod-antennapod",
+  "name": "AntennaPod",
+  "owner": "AntennaPod",
+  "ownerType": "Organization",
+  "repo": "AntennaPod",
+  "repoUrl": "https://github.com/AntennaPod/AntennaPod",
+  "description": "A podcast player that is simple and offers full control. Open source, no ads, respects your privacy.",
+  "icon": "https://github.com/AntennaPod.png",
+  "color": "#1a73e8",
+  "category": "Media",
+  "topics": [
+    "android",
+    "podcast",
+    "podcasts",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "3.5.1",
+  "versionCode": 3051000,
+  "minSdk": 21,
+  "publishedAt": "2026-02-18T00:00:00Z",
+  "size": 10240000,
+  "downloadUrl": "https://github.com/AntennaPod/AntennaPod/releases/download/3.5.1/AntennaPod-3.5.1-universal-release.apk",
+  "releasePage": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.5.1",
+  "stars": 6900,
+  "forks": 1700,
+  "downloadCount": null,
+  "score": 48.7,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

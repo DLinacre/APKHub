@@ -1,0 +1,40 @@
+{
+  "slug": "brave-browser",
+  "name": "Brave",
+  "owner": "brave",
+  "ownerType": "Organization",
+  "repo": "browser-android-tabs",
+  "repoUrl": "https://github.com/brave/browser-android-tabs",
+  "description": "Privacy-focused Android browser with built-in ad blocker and HTTPS everywhere.",
+  "icon": "https://github.com/brave.png",
+  "color": "#fb542b",
+  "category": "Internet",
+  "topics": [
+    "android",
+    "browser",
+    "privacy",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "MPL-2.0",
+  "licenseDeclared": true,
+  "version": "1.66.115",
+  "versionCode": 166115,
+  "minSdk": 24,
+  "publishedAt": "2026-04-05T00:00:00Z",
+  "size": 215000000,
+  "downloadUrl": "https://github.com/brave/browser-android-tabs/releases/download/v1.66.115/Brave.apk",
+  "releasePage": "https://github.com/brave/browser-android-tabs/releases/tag/v1.66.115",
+  "stars": 610,
+  "forks": 220,
+  "downloadCount": null,
+  "score": 29.4,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "simplemobiletools-simple-calendar",
+  "name": "Simple Calendar",
+  "owner": "SimpleMobileTools",
+  "ownerType": "Organization",
+  "repo": "Simple-Calendar",
+  "repoUrl": "https://github.com/SimpleMobileTools/Simple-Calendar",
+  "description": "A simple calendar with events, reminders and widgets. No ads, no internet permission.",
+  "icon": "https://github.com/SimpleMobileTools.png",
+  "color": "#c62828",
+  "category": "Productivity",
+  "topics": [
+    "android",
+    "calendar",
+    "kotlin"
+  ],
+  "language": "Kotlin",
+  "license": "GPL-3.0",
+  "licenseDeclared": true,
+  "version": "6.22.5",
+  "versionCode": 228,
+  "minSdk": 23,
+  "publishedAt": "2025-12-12T00:00:00Z",
+  "size": 6100000,
+  "downloadUrl": "https://github.com/SimpleMobileTools/Simple-Calendar/releases/download/6.22.5/calendar-release.apk",
+  "releasePage": "https://github.com/SimpleMobileTools/Simple-Calendar/releases/tag/6.22.5",
+  "stars": 3700,
+  "forks": 1300,
+  "downloadCount": null,
+  "score": 36.8,
+  "recommendedAsset": {
+    "arch": "universal",
+    "abi": "universal"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}

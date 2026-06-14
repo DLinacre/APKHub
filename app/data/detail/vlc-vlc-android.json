@@ -1,0 +1,40 @@
+{
+  "slug": "vlc-vlc-android",
+  "name": "VLC for Android",
+  "owner": "videolan",
+  "ownerType": "Organization",
+  "repo": "vlc-android",
+  "repoUrl": "https://github.com/videolan/vlc-android",
+  "description": "Free and open source cross-platform multimedia player that plays most multimedia files.",
+  "icon": "https://github.com/videolan.png",
+  "color": "#ff8800",
+  "category": "Media",
+  "topics": [
+    "android",
+    "video",
+    "media-player",
+    "java"
+  ],
+  "language": "Java",
+  "license": "GPL-2.0",
+  "licenseDeclared": true,
+  "version": "3.6.5",
+  "versionCode": 36050,
+  "minSdk": 21,
+  "publishedAt": "2026-02-28T00:00:00Z",
+  "size": 48000000,
+  "downloadUrl": "https://github.com/videolan/vlc-android/releases/download/3.6.5/VLC-Android-3.6.5-arm64-v8a.apk",
+  "releasePage": "https://github.com/videolan/vlc-android/releases/tag/3.6.5",
+  "stars": 2600,
+  "forks": 700,
+  "downloadCount": null,
+  "score": 40.2,
+  "recommendedAsset": {
+    "arch": "arm64-v8a",
+    "abi": "arm64-v8a"
+  },
+  "screenshots": [],
+  "archived": false,
+  "indexedAt": "2026-06-14T09:00:00Z",
+  "releaseNotes": "<p>This is a demo entry generated offline.</p>"
+}
