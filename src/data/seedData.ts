@@ -1,3 +1,5 @@
+import { EXTRA_APPS } from "./extraApps";
+
 export interface AppRecord {
   slug: string;
   name: string;
@@ -31,7 +33,7 @@ export interface AppRecord {
   releaseNotes?: string | null;
 }
 
-export const SEED_APPS: AppRecord[] = [
+const BASE_APPS: AppRecord[] = [
   // ─────────────── TOOLS ───────────────
   {
     slug: "termux-termux-app",
@@ -2972,6 +2974,8 @@ export const SEED_APPS: AppRecord[] = [
     indexedAt: "2026-06-14T09:00:00Z",
   },
 ];
+
+export const SEED_APPS: AppRecord[] = [...BASE_APPS, ...EXTRA_APPS];
 
 export const CATEGORIES = [
   "All",
