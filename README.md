@@ -1,4 +1,8 @@
-# 📱 AppHub
+<p align="center">
+  <img src="assets/banner.svg" alt="APKHub Banner" width="100%">
+</p>
+
+# 📱 APKHub — Private Android APK Store & Indexer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Android Build](https://img.shields.io/badge/Platform-Android-green.svg)](https://github.com/LIN4CRE/AppHub/releases)

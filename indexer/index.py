@@ -210,6 +210,7 @@ class GitHubClient:
     def _observe_rate_limit(self, headers) -> None:
         remaining = headers.get("X-RateLimit-Remaining")
         reset = headers.get("X-RateLimit-Reset")
+        limit = headers.get("X-RateLimit-Limit")
         if remaining is not None:
             try:
                 self._remaining = int(remaining)
@@ -220,10 +221,15 @@ class GitHubClient:
                 self._reset_at = float(reset)
             except ValueError:
                 pass
+
         # If we've used more than (1-fraction) of the window, wait it out.
-        if self._remaining < 200 and self._reset_at > time.time():
+        # Use a dynamic threshold: for 5000 limit, it's ~1000; for 60, it's ~12.
+        current_limit = int(limit) if limit else 5000
+        threshold = current_limit * (1.0 - self.fraction)
+        
+        if self._remaining < threshold and self._reset_at > time.time():
             wait = self._reset_at - time.time() + 2
-            human_log(event="rate_limit_wait", seconds=round(wait, 1))
+            human_log(event="rate_limit_wait", seconds=round(wait, 1), remaining=self._remaining, limit=current_limit)
             time.sleep(max(wait, 0.0))
 
     def _request(self, method: str, url: str, **kw) -> requests.Response:
@@ -321,10 +327,11 @@ query ($ids: [ID!]!) {
 # --------------------------------------------------------------------------- #
 # Candidate resolution
 # --------------------------------------------------------------------------- #
-def resolve_candidates(client: GitHubClient, cfg: dict) -> list[str]:
-    """Return a deduped list of 'owner/repo' candidates to inspect."""
+def resolve_candidates(client: GitHubClient, cfg: dict) -> dict[str, str]:
+    """Return a map of 'owner/repo' -> node_id for candidates to inspect."""
     disc = cfg.get("discovery", {})
-    seeds: set[str] = set(disc.get("seeds", []))
+    # seeds from config don't have node_ids yet; we'll fetch them in fetch_node_ids
+    found_ids: dict[str, str] = {s: "" for s in disc.get("seeds", [])}
     per_page = int(disc.get("search_per_page", 100))
     max_pages = int(disc.get("search_max_pages", 3))
 
@@ -337,20 +344,32 @@ def resolve_candidates(client: GitHubClient, cfg: dict) -> list[str]:
             human_log(event="search_failed", topic=topic, error=str(e))
             continue
         for it in items:
-            seeds.add(f"{it['owner']['login']}/{it['name']}")
-        human_log(event="topic_harvest", topic=topic, found=len(items), total=len(seeds))
+            name = f"{it['owner']['login']}/{it['name']}"
+            found_ids[name] = it["node_id"]
+        human_log(event="topic_harvest", topic=topic, found=len(items), total=len(found_ids))
 
-    return sorted(seeds)
+    return found_ids
 
 
-def fetch_node_ids(client: GitHubClient, owner_repo_list: list[str]) -> dict[str, str]:
-    """Resolve owner/repo -> GraphQL node id (one cheap REST call each, cached)."""
-    ids: dict[str, str] = {}
-    for name in owner_repo_list:
+def fetch_node_ids(client: GitHubClient, candidates: dict[str, str]) -> dict[str, str]:
+    """Ensure every candidate has a node_id, fetching any that are missing."""
+    ids = candidates.copy()
+    missing = [name for name, node_id in ids.items() if not node_id]
+    
+    if not missing:
+        return ids
+
+    human_log(event="fetching_missing_ids", count=len(missing))
+    for name in missing:
         resp = client._request("GET", f"{GITHUB_API}/repos/{name}")
         if resp.status_code == 200:
             ids[name] = resp.json()["node_id"]
-    return ids
+        else:
+            human_log(event="id_resolve_failed", repo=name, status=resp.status_code)
+            if name in ids:
+                del ids[name]
+    
+    return {k: v for k, v in ids.items() if v}
 
 
 # --------------------------------------------------------------------------- #

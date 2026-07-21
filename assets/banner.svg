@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" fill="none">
+  <defs>
+    <linearGradient id="apkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#065f46" />
+    </linearGradient>
+    <linearGradient id="emeraldGlowApk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#A7F3D0" />
+    </linearGradient>
+    <pattern id="gridApk" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#34D399" stroke-opacity="0.08" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#apkGrad)" />
+  <rect width="1280" height="360" fill="url(#gridApk)" />
+
+  <!-- APKHub Emblem Container -->
+  <rect x="70" y="65" width="230" height="230" rx="36" fill="#022c22" fill-opacity="0.8" stroke="#34D399" stroke-opacity="0.4" stroke-width="2" />
+  
+  <!-- Android APK Vector Icon -->
+  <g transform="translate(105, 100) scale(1.6)">
+    <path d="M6 18A2 2 0 0 1 4 16V8A2 2 0 0 1 6 6H18A2 2 0 0 1 20 8V16A2 2 0 0 1 18 18Z" fill="none" stroke="url(#emeraldGlowApk)" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="9" cy="11" r="1.5" fill="#34D399"/>
+    <circle cx="15" cy="11" r="1.5" fill="#34D399"/>
+    <path d="M9 4L7 6M15 4L17 6" stroke="#A7F3D0" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="340" y="110" fill="#A7F3D0" font-family="monospace" font-size="16" font-weight="700" letter-spacing="2">PRIVATE ANDROID APK &amp; APP STORE ENGINE</text>
+  <text x="336" y="180" fill="#ECFEFF" font-family="sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5">APKHub</text>
+  <text x="340" y="225" fill="#A7F3D0" font-family="sans-serif" font-size="22">React 19 · Python Indexer · F-Droid &amp; GitHub Release Tracker</text>
+
+  <!-- Badge -->
+  <rect x="340" y="255" width="280" height="42" rx="21" fill="#065f46" stroke="#34D399" stroke-opacity="0.5" stroke-width="1.5" />
+  <circle cx="365" cy="276" r="6" fill="#34D399" />
+  <text x="382" y="281" fill="#ECFEFF" font-family="monospace" font-size="14" font-weight="700">OPEN SOURCE &amp; VERIFIED</text>
+</svg>
