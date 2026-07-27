@@ -50,13 +50,18 @@ jobs:
           name: apphub-debug
           path: android-app/app/build/outputs/apk/debug/app-debug.apk
 
+      - name: Install Node dependencies & Build Web App
+        run: |
+          npm ci
+          npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload PWA artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'app'
+          path: 'dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
