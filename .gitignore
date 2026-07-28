@@ -3,4 +3,17 @@ dist/
 .env
 .env.local
 *.log
-android-app/build/reports/
+
+# Android & Gradle Build Artifacts
+.gradle/
+android-app/.gradle/
+android-app/build/
+build/
+.idea/
+*.ap_
+*.apk
+*.dex
+*.bin
+*.lock
+
+.vercel

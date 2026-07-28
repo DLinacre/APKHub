@@ -1,0 +1,15 @@
+[indexing]
+rate_limit_fraction = 0.8
+max_graphql_batch = 5
+releases_per_repo = 1
+assets_per_release = 1
+
+[discovery]
+seeds = ["termux/termux-app"]
+topics = []
+search_per_page = 1
+search_max_pages = 1
+
+[output]
+out_dir = "app/data"
+write_detail = true
