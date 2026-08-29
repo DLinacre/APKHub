@@ -68,7 +68,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         with:
           tag_name: v1.0.1
